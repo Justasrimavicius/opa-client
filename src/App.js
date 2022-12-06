@@ -12,7 +12,6 @@ function App() {
   const [UID, setUID] = useState('');
 
   useEffect(()=>{
-    console.log(UID);
   },[UID])
 
   return (

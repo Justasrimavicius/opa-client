@@ -9,7 +9,6 @@ function Signup(props) {
     const { UID, setUID } = useContext(MyContext);
 
     async function checkSubmit(e){
-        console.log(props)
 
         e.preventDefault();
         let xhr = new XMLHttpRequest();
@@ -24,7 +23,6 @@ function Signup(props) {
 
         xhr.onload = ()=>{
             const parsedResponse = JSON.parse(xhr.responseText);
-            console.log(parsedResponse)
             if(parsedResponse.UID){
                 setUID(parsedResponse.UID);
                 props.setAuthenticated(true);

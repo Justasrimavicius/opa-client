@@ -53,7 +53,6 @@ function ScrapeTwitter(props) {
             freq: freq
         }));
         xhr.onload = ()=>{
-            console.log(xhr.responseText)
             setLoading(false);
             const response = xhr.responseText.slice(2, xhr.responseText.length - 4);
             const temp_all = response.split('(');
@@ -70,7 +69,6 @@ function ScrapeTwitter(props) {
                     return (innerElem.replaceAll(' ', '')).replaceAll(`'`,'');
                 })
             })
-            console.log(final);
             setScrapeResults(final);
         }
     }
