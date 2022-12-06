@@ -36,6 +36,7 @@ function ScrapeReddit(props) {
         }
         if(freq != '' && freq > 1000){
             setError(`Word frequency can't be larger then 1000`)
+            return;
         }
         if(text==previousText.current){
             setError('Type a different word/phrase');
