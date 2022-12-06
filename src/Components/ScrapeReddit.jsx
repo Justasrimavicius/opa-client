@@ -6,7 +6,7 @@ import { useRef } from 'react';
 import MyContext from '../context';
 import WordCloudSec from './MainSections/WordCloudSec';
 
-import link from '../../link';
+import link from '../link';
 
 function ScrapeReddit(props) {
     const { UID } = useContext(MyContext);

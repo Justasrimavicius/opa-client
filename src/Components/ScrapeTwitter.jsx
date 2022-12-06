@@ -6,7 +6,7 @@ import { useRef } from 'react';
 import MyContext from '../context';
 import WordCloudSec from './MainSections/WordCloudSec';
 
-import link from '../../link';
+import link from '../link';
 
 function ScrapeTwitter(props) {
     const { UID } = useContext(MyContext);

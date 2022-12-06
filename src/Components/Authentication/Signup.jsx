@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 
 import MyContext from '../../context';
-
+import link from '../../link';
 function Signup(props) {
 
     const [authErrorMsg, setAuthErrorMsg] = useState('');
