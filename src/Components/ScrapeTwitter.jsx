@@ -6,6 +6,8 @@ import { useRef } from 'react';
 import MyContext from '../context';
 import WordCloudSec from './MainSections/WordCloudSec';
 
+import link from '../../link';
+
 function ScrapeTwitter(props) {
     const { UID } = useContext(MyContext);
     const [error, setError] = useState(null);
@@ -44,7 +46,7 @@ function ScrapeTwitter(props) {
         setLoading(true);
 
         let xhr = new XMLHttpRequest();
-        xhr.open('POST','http://localhost:8080/twitterScrapping', true);
+        xhr.open('POST',`${link}/twitterScrapping`, true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify({
             text: text,

@@ -6,6 +6,8 @@ import { useRef } from 'react';
 import MyContext from '../context';
 import WordCloudSec from './MainSections/WordCloudSec';
 
+import link from '../../link';
+
 function ScrapeReddit(props) {
     const { UID } = useContext(MyContext);
     const [error, setError] = useState(null);
@@ -46,7 +48,7 @@ function ScrapeReddit(props) {
         setLoading(true);
 
         let xhr = new XMLHttpRequest();
-        xhr.open('POST','http://localhost:8080/redditScrapping', true);
+        xhr.open('POST',`${link}/redditScrapping`, true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify({
             text: text,

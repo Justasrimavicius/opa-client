@@ -13,7 +13,7 @@ function Signup(props) {
 
         e.preventDefault();
         let xhr = new XMLHttpRequest();
-        xhr.open("POST", 'http://localhost:8080/signup', true);
+        xhr.open("POST", `${link}/signup`, true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify({
             email: e.currentTarget.email.value,
