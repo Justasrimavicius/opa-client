@@ -1,0 +1,211 @@
+body{
+    margin: 0;
+    background-color: azure;
+}
+.App{
+    height: 100vh;
+}
+main{
+    height: 90vh;
+    margin: 0 10vw;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.inputs{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.main-text-input{
+    background: rgba(255, 255, 255, 0.85);
+    opacity: 0.5;
+    border-radius: 50px;
+    width: 49%;
+    height: 50px;
+    font-size: 2rem;
+    box-shadow: 0px 6px 20px 0px #8d8d8d;
+    border: 0;
+    outline: 2px solid gray;
+}
+.main-text-input:hover{
+    background-color: rgb(232, 232, 232);
+}
+.main-text-input:focus{
+    outline: 2px solid rgb(79, 79, 79);
+}
+.input-results{
+    background: linear-gradient(120deg, rgba(8, 227, 255, 0.162) 13.4%, rgba(234, 247, 87, 0.6) 86.6%);
+    border-radius: 50px;
+    width: 90%;
+    height: 50%;
+    padding: 0px 0 30px 0;
+    box-shadow: 0px 6px 20px 0px #8d8d8d;
+}
+.input-innerResults{
+    height: 80%;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.input-buttons{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.input-buttons button,
+.goBack-btn{
+    /* background: linear-gradient(120deg, rgba(245, 237, 71, 0.5) 13.4%, rgba(128, 245, 232, 0.5) 86.6%); */
+    background-color: rgb(255, 255, 255);
+    opacity: 0.5;
+    border-radius: 50px;
+    min-height: 50px;
+    width: 45%;
+    max-width: 300px;
+    padding: 0 10px;
+    box-shadow: 0px 6px 20px 0px #8d8d8d;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 2px solid black;
+
+    transition: 0.5s all;
+}
+.goBack-btn{
+    background-color: #b5b5b500;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    height: 20px !important;
+}
+.input-buttons button:hover{
+    box-shadow: 0px 10px 20px 1px #6c6c6c;
+}
+.goBack-btn{
+    min-width: 20%;
+}
+.redditIcon-main{
+    position: fixed;
+    width: 15vw;
+    left: 20vw;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-left: 13px;
+
+}
+.twitterIcon-main{
+    position: fixed;
+    width: 15vw;
+    right: 20vw;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-right: 13px;
+}
+
+
+.scrapeTwitter,
+.scrapeReddit{
+    width: 80vw;
+    height: 90vh;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+    
+}
+.errorMsg{
+    color: red;
+}
+.button-disabled{
+    pointer-events: none;
+    background: #acacac !important;
+}
+.input-results ul{
+    padding: 0 10%;
+    margin: 0;
+    height: 50px;
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+.reddit-ul{
+    border-bottom: 1px solid rgb(96, 96, 96) !important;
+}
+
+#burbulas{
+    width: 90%;
+}
+#burbulas svg{
+    padding: 15px 0px 15px 0px;
+}
+#burbulas svg{
+    width: 100% !important;
+    height: 100% !important;
+}
+.wordCloudOff{
+    width: 90%;
+    height: 50%;
+    overflow: scroll;
+}
+.bubble-cloud-outer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 50%;
+    padding: 24px;
+}
+
+.no-results{
+    width: 100%;
+    margin-top: 5px;
+   text-align: center;
+   font-size: 1.5rem;
+   font-weight: bold;
+   color: rgb(63, 0, 0);
+}
+@media (max-width: 750px){
+    main{
+        margin: 0;
+        width: 100vw;
+    }
+    .name{
+        font-size: 3rem;
+        grid-column: 2/6 !important;
+    }
+    .redditIcon-main,
+    .twitterIcon-main{
+        width: 20vw !important;
+    }
+    .input-buttons button,
+    .goBack-btn{
+        font-size: 1.1rem;
+    }
+    .main-text-input{
+        font-size: 1.4rem;
+        height: 40px;
+        width: 100%;
+    }
+    .inputs{
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+@media (min-width: 1400px){
+    .redditIcon-main,
+    .twitterIcon-main{
+        width: 12vw !important;
+    }
+}
