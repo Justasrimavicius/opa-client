@@ -10,7 +10,6 @@ function Login(props){
     const { UID, setUID } = useContext(MyContext);
     
     function submitForm(e){
-        console.log(link)
         e.preventDefault();
         let xhr = new XMLHttpRequest();
         xhr.open("POST", `${link}/login`, true);
