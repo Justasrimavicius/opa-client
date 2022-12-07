@@ -11,7 +11,7 @@ function Header(props) {
         <header>
             <div className='header-content'>
                 <p className='name' style={{margin: '0'}}>Opa<img src={require('../../Photos/key.png')} style={{width: '50px', margin: '0 0 3 -10px'}}></img></p>
-                {props.isAuthenticated == false ? <button onClick={()=>{setUID('');props.setAuthenticated(false)}} className='header-btn'>Back to authentication</button> : <button onClick={()=>{props.setAuthenticated(false)}} className='header-btn'>Log out</button>}
+                {props.isAuthenticated == false ? <button onClick={()=>{props.setAuthenticated(false)}} className='header-btn'>Back to authentication</button> : <button onClick={()=>{setUID('');props.setAuthenticated(false)}} className='header-btn'>Log out</button>}
             
             </div>
         </header>
