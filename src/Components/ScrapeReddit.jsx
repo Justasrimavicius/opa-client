@@ -129,6 +129,10 @@ function ScrapeReddit(props) {
                         singleField[0] = singleField[0].replaceAll('/','')
                         singleField[0] = singleField[0].replaceAll('"','')
                         singleField[0] = singleField[0].replaceAll(`\\`,'')
+                        singleField[0] = singleField[0].replaceAll(`,`,'')
+                        singleField[0] = singleField[0].replaceAll(`:`,'')
+                        singleField[0] = singleField[0].replaceAll(`.`,'')
+
 
                         console.log(singleField[0])
                         if(isNaN(singleField[1]))return;
